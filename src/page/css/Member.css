@@ -1,0 +1,116 @@
+
+.container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    /* background-color: #f9fbfc; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.listBox {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: #e6eef3;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+.idList, .nickList, .addressList, .dateList,
+.loginId, .nickname, .address, .regDate {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d1d1;
+}
+
+.loginId{
+    position:relative;
+}
+.keyName {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.keyName:hover {
+    background-color: #f1f7fb;
+}
+
+#banBtn {
+    position:absolute;
+    right:10px;
+    
+    padding: 4px 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#banBtn:hover {
+    background-color: #d93636;
+}
+
+.customModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.customModalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.customModalContent input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modalButton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modalButton button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalButton button:first-child {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.modalButton button:last-child {
+  background-color: #ddd;
+}

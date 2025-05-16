@@ -1,8 +1,9 @@
 import './App.css'
-import {Dashboard, Member} from './page'
+import {Dashboard, Member, BlackList} from './page'
 import {Routes, Route} from 'react-router-dom'
 import {Container, Row, Col, Navbar, Nav} from 'react-bootstrap'
 import {useState} from 'react'
+
 
 function App() {
   const [expanded, setExpanded] = useState(false)
@@ -18,6 +19,7 @@ function App() {
             <Nav className="ms-auto">
               <Nav.Link href="/">대시보드</Nav.Link>
               <Nav.Link href="/member">회원관리</Nav.Link>
+              <Nav.Link href="/blackList">블랙리스트</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -28,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/member" element={<Member />} />
+          <Route path="/blackList" element={<BlackList />} />
         </Routes>
       </main>
 
@@ -43,6 +46,7 @@ function App() {
               <Nav className="justify-content-center justify-content-md-end">
                 <Nav.Link href="/">대시보드</Nav.Link>
                 <Nav.Link href="/member">회원관리</Nav.Link>
+                <Nav.Link href="/blackList">블랙리스트</Nav.Link>
               </Nav>
             </Col>
           </Row>

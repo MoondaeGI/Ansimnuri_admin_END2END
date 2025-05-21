@@ -12,6 +12,7 @@ export const BlackList = () => {
   const fetchBlackList = () => {
     axios.get('http://localhost/api/admin/block') // 실제로 GET 요청을 보내야 합니다
       .then(response => {
+        console.log(response.data); console.log(response.data);
         setBlackList(response.data); // 응답 데이터 저장
       })
       .catch(error => {
@@ -42,7 +43,7 @@ export const BlackList = () => {
 
       {blackList.map((item) => (
         <div className="keyName" key={item.id}>
-          <div className="memberId">{item.memberId}
+          <div className="memberId">{item.login_Id}
           <button className="unblockBtn" onClick={() => handleUnblock(item.id)}>해제</button>
           </div>
           <div className="regDate">{item.regDate}</div>

@@ -12,6 +12,7 @@ export const Member = () => {
   useEffect(() => {
     axios.get('http://localhost/api/admin')
       .then(response => {
+         console.log(response.data);
         setMembers(response.data);
       })
       .catch(error => {
